@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Python Documentation">
+	<meta name="keywords" content="Python">
+	<meta name="author" content="THEKMAN">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FCC: Technical Documentation</title>
+	<link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/python.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<!-- Navigation Bar -->
+	<header>
+		<!-- This title is only visible on mobile screens -->
+		<header id="mobile-title">
+			<h1>Python Documentation</h1>
+			<p>Python Introduction, made easy!</p>
+		</header>
+
+		<nav id="navbar">
+			<header id="m-title">
+				<h1>Python Documentation</h1>
+				<p>Python Introduction, made easy!</p>
+			</header>
+			<ul>
+				<li id="nav-link-start"><a class="nav-link" href="#introduction">Introduction</a></li>
+				<li><a class="nav-link" href="#hello_world">Hello World</a></li>
+				<li><a href="#data_types" class="nav-link">Data Types</a></li>
+				<li><a href="#variables" class="nav-link">Variables</a></li>
+				<li><a href="#conditional_statements" class="nav-link">Conditional Statements</a></li>
+				<li><a href="#loops" class="nav-link">Loops</a></li>
+				<li><a href="#functions" class="nav-link">Functions</a></li>
+				<li><a href="#reference" class="nav-link">Reference</a></li>
+			</ul>
+
+			<div id="credits">
+				&copy thekman
+				<!-- <a href="https://github.com/code-plus-coffee" target="_blank">
+					<img class="credit-icon" src="https://img.icons8.com/material-rounded/30/000000/github.png">
+				</a>
+				<a href="https://icons8.com/icons" target="_blank">
+					<img class="credit-icon"
+						src="https://img.icons8.com/material-outlined/32/000000/icons8-new-logo.png">
+				</a> -->
+			</div>
+		</nav>
+	</header>
+
+	<!-- Documentation -->
+	<main id="main-doc">
+		<section class="main-section" id="introduction">
+			<header>
+				<h1>Introduction</h1>
+			</header>
+			<p>Python is an interpreted, high-level, general-purpose programming language.
+				Created by <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a>
+				and first released in 1991, Python's design philosophy
+				emphasizes code readability with its notable use
+				of significant whitespace. Its language
+				constructs and object-oriented approach aim to help
+				programmers write clear, logical code for small and
+				large-scale projects.</p>
+			<p>Python is a multi-paradigm programming language.
+				Object-oriented programming and structured programming
+				are fully supported, and many of its features support
+				functional programming and aspect-oriented
+				programming (including by metaprogramming and metaobjects
+				(magic methods)). Many other paradigms are supported via
+				extensions, including design by contract and logic programming.</p>
+			<p>Python uses dynamic typing and a combination of reference
+				counting and a cycle-detecting garbage
+				collector for memory management. It also features
+				dynamic name resolution (late binding), which binds
+				method and variable names during program execution.</p>
+			<p>Python's design offers some support for functional programming
+				in the Lisp tradition. It has filter, map,
+				and reduce functions; list comprehensions, dictionaries, sets,
+				and generator expressions. The standard
+				library has two modules (itertools and
+				functools) that implement functional tools borrowed from
+				Haskell and Standard ML.</p>
+			<p>Rather than having all of its functionality built into
+				its core, Python was designed to be highly
+				extensible. This compact modularity has made it particularly
+				popular as a means of adding programmable
+				interfaces to existing applications. Van Rossum's
+				vision of a small core language with a large standard library
+				and easily extensible interpreter stemmed
+				from his frustrations with ABC, which espoused the opposite
+				approach.</p>
+		</section>
+
+		<div class="sep"></div>
+
+		<section class="main-section" id="hello_world">
+			<header>
+				<h1>Hello World</h1>
+			</header>
+			<p>The first program for every programmer is the famous "Hello World".
+				In Python, you can write the program
+				in many ways but not limited to the following example code.</p>
+			<code>
+				def main(): 
+				<br>
+				<span class="indent">print('Hello, World!')</span>
+			<br>
+				main()
+				<br>
+				<p class="comment"># Hello, World!</p>
+			</code>
+		</section>
+
+		<div class="sep"></div>
+
+		<section id="data_types" class="main-section">
+			<header>
+				<h1>Data Types</h1>
+			</header>
+			<p>Python has the following data types:</p>
+			<ul>
+				<li>Integer</li>
+				<li>Float</li>
+				<li>Complex Numbers</li>
+				<li>String</li>
+				<li>List (Array)</li>
+				<li>Tuple</li>
+			</ul>
+			<p>Example:</p>
+			<code>
+				<p class="comment"># integer</p>
+				number = 5
+				<p class="comment"># float</p>
+				fraction = 5.5
+				<p class="comment"># complex number</p>
+				complex = 7 + 26i
+				<p class="comment"># string</p>
+				name = 'Python'
+				<p class="comment"># list (array)</p>
+				numbers = [726, 727, 728, 729, 730]
+				<p class="comment"># tuple</p>
+				keys = (726, 'connect', 60.9)
+			</code>
+		</section>
+
+		<div class="sep"></div>
+
+		<section id="variables" class="main-section">
+			<header>
+				<h1>Variables</h1>
+			</header>
+			<p>Python is a dynamically typed language. Unlike the
+				statically typed languages, the data type is not
+				specified before the initialization of a variable.</p>
+
+			<h3>Rules for creating variables</h3>
+			<p>In Python, rules for creating variables are similar to other languages.
+				They are as follows:
+				<ul>
+					<li>A variable name must start with a letter or the underscore character.</li>
+					<li>A variable name cannot start with a number.</li>
+					<li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ ).
+					</li>
+					<li>Variable names are case-sensitive (name, Name and NAME are three different variables).</li>
+					<li>The reserved words(keywords) cannot be used naming the variable.</li>
+				</ul>
+			</p>
+			<p>Variables can be initialized as follows:</p>
+			<code>
+				<p class="comment"># integer</p>
+				var = 0
+				<p class="comment"># empty string</p>
+				username = ''
+				<p class="comment"># float</p>
+				average = 0.0
+			</code>
+
+			<h3>Multiple variable assignment</h3>
+			<p>Python allows multiple assignment of variables simultaneously, i.e. on a single line of code.</p>
+			<code>
+				<p class="comment"># assign multiple value on single line</p>
+				name, age, gender = 'Siri', 9, 'F'
+			</code>
+
+			<h3>One variable, different data types</h3>
+			<p>Variable already in use with a data type, can be used to assign value of different data type as well.
+				For Example:
+			</p>
+			<code>
+				<p class="comment"># integer</p>
+				var = 267
+				<p class="comment"># string</p>
+				var = 'Two Sixty Seven'
+			</code>
+		</section>
+
+		<div class="sep"></div>
+
+		<section id="conditional_statements" class="main-section">
+			<header>
+				<h1>Conditional Statements</h1>
+			</header>
+			<p>Conditional statements are one of the fundamental & important
+				part of any programming language. These statements help us create
+				a decision tree on which action to be performed on certain
+				condition.
+			</p>
+
+			<h3>if .. else</h3>
+			<p>Basic if .. else statement looks like the following code example:</p>
+			<code>
+				driver_age = 17 <br>
+				<p class="comment"># Driver is eligible only if age is equal to or above 18</p>
+				if(driver_age >= 18):
+				<span class="indent">print('You are eligible for driving')</span>
+				else:
+				<span class="indent">print('Sorry, you need to at least 18 in order to drive')</span>
+			</code>
+
+			<h3>if .. else ladder</h3>
+			<p>When there are multiple condition which are to be checked in the
+				conditional statement, if else ladder is one way to achieve it.
+			</p>
+			<code>
+				x, y = 7, 7 <br>
+				if(x < y):
+				<span class="indent">print('x is less than y')</span>
+				elif(x > y):
+				<span class="indent">print('x is greater than y')</span>
+				else:
+				<span class="indent">print('x is equal to y')</span>
+
+			</code>
+		</section>
+
+		<div class="sep"></div>
+
+		<section id="loops" class="main-section">
+			<header>
+				<h1>Loops</h1>
+			</header>
+			<p>Looping saves a lot of time in programming by performing
+				repeated tasks wrapped inside them. Like many other programming
+				languages, Python has the following types of loops.
+				<ul>
+					<li>for in</li>
+					<li>while</li>
+				</ul>
+			</p>
+
+			<h3>for in</h3>
+			<code>
+				<p class="comment"># Print ten numbers using for in loop</p>
+				for i in range(0, 10, 1):
+				<span class="indent">print(i)</span>
+				<p class="comment"># Iterate over the given list & print the content</p>
+				shopping_list = ['Processor', 'RAM', 'Motherboard'] <br>
+				for item in shopping_list:
+				<span class="indent">print(item)</span>
+				<p class="comment"># Processor, RAM, Motherboard</p>
+			</code>
+
+			<h3>while</h3>
+			<code>
+				<p class="comment"># Print ten numbers using while loop</p>
+				i = 0 <br>
+				while(i < 10):
+				<span class="indent">print(i)</span>
+				<span class="indent">i += 1</span>
+				<p class="comment"># Iterate over the given list & print the content</p>
+				shopping_list = ['Processor', 'RAM', 'Motherboard'] <br>
+				size = len(shopping_list) <br>
+				i = 0 <br>
+				while(i < size):
+				<span class="indent">print(shopping_list[i])</span>
+				<span class="indent">i += 1</span>
+				<p class="comment"># Processor, RAM, Motherboard</p>
+			</code>
+		</section>
+
+		<div class="sep"></div>
+
+		<section id="functions" class="main-section">
+			<header>
+				<h1>Functions</h1>
+			</header>
+
+			<p>Object oriented programming languaes are mainly comprised
+				of modular chunks of code which make it easy to maintain & most
+				importantly to debug. Functions are one way to achieve modularity
+				in Python. Functions are blocks of code which perform certain
+				tasks & yield a result.
+			</p>
+
+			<p>In Python, the <code class="inline-code">def</code> keyword is
+				used to define a function's prototype. For Example:
+			</p>
+			<code>
+				<p class="comment"># Function to compute the area of rectangle</p>
+				def area(length, breadth):
+				<span class="indent">return(length * breadth)</span> <br>
+				print(area(20, 25))
+
+				<p class="comment"># 500</p>
+			</code>
+		</section>
+
+		<div class="sep"></div>
+
+		<section id="reference" class="main-section">
+			<header>
+				<h1>Reference</h1>
+			</header>
+			<ul>
+				<li><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Wikipedia</a></li>
+				<li><a href="https://www.geeksforgeeks.org/python-programming-language">GeeksForGeeks</a></li>
+				<li><a href="https://www.guru99.com/if-loop-python-conditional-structures.html">Guru99</a></li>
+			</ul>
+		</section>
+	</main>
+
+	<footer class="mobile">
+		&copy thekman -
+		<a href="https://github.com/code-plus-coffee" target="_blank">
+			<img class="credit-icon" src="https://img.icons8.com/material-rounded/30/000000/github.png">
+		</a> •
+		<a href="https://icons8.com/icons" target="_blank">
+			<img class="credit-icon" src="https://img.icons8.com/material-outlined/32/000000/icons8-new-logo.png">
+		</a>
+	</footer>
+
+	<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+
+</html>

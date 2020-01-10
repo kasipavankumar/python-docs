@@ -1,0 +1,199 @@
+/* Base font: Overpass */
+@import url("https://fonts.googleapis.com/css?family=Overpass&display=swap");
+
+/* Monospace font: Source Code Pro */
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap");
+
+/* Styles */
+body {
+    font-family: "Overpass", sans-serif;
+    margin: 0;
+}
+
+#m-title {
+    padding: 0.3em;
+}
+
+#mobile-title {
+    display: none;
+}
+
+main {
+    text-align: justify;
+    margin-left: 280px;
+    padding: 1em;
+}
+
+#intro-header {
+    margin: 0;
+}
+
+#main-doc a {
+    background: linear-gradient(to bottom, lightgray 0%, lightgray 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: #000;
+    text-decoration: none;
+    transition: linear 0.2s;
+}
+
+#main-doc a:hover {
+    background-size: 4px 50px;
+}
+
+#navbar {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 280px;
+    background-color: #f1f1f1;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+/* 
+Custom Scroll Bar 
+Ref: https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp		
+*/
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: lightgray;
+}
+
+::-webkit-scrollbar-track {
+    background: lightgray;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 30px;
+}
+
+#navbar li {
+    border-bottom: 1px solid lightgray;
+    padding: 1em;
+}
+
+#navbar li:hover {
+    background-color: lightgray;
+}
+
+#nav-link-start {
+    border-top: 1px solid lightgray;
+}
+
+code {
+    display: flex;
+    flex-direction: column;
+    font-family: "Source Code Pro", monospace;
+    font-size: 0.8em;
+    background-color: #f1f1f1;
+    padding: 0.5em;
+    border-radius: 4px;
+    line-height: 22px;
+}
+
+.inline-code {
+    display: inline-block;
+}
+
+.indent {
+    margin-left: 30px;
+}
+
+.comment {
+    color: gray;
+}
+
+.sep {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70px;
+    border-bottom: 2px solid gray;
+}
+
+#credits {
+    color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.credit-icon {
+    margin-left: 5px;
+    margin-right: 5px;
+    opacity: 0.6;
+    height: 20px;
+    width: 20px;
+}
+
+.credit-icon:hover {
+    opacity: 0.8;
+}
+
+.mobile {
+    display: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 0.9em;
+    text-align: center;
+    letter-spacing: 2px;
+    color: gray;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    #navbar {
+        width: 200px;
+    }
+
+    main {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 425px) {
+    #navbar {
+        display: none;
+    }
+
+    main {
+        margin: 0;
+    }
+
+    #mobile-title {
+        display: block;
+        padding: 0.3em;
+        text-align: center;
+	}
+	
+	.mobile {
+		display: flex;
+	}
+}
